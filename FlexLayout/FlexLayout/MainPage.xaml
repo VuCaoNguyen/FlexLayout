@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FlexLayout.MainPage"
+             Title="                                City"
+            >
+    <StackLayout>
+        <Image Source="booking.PNG" HeightRequest="100" Aspect="AspectFill"/>
+        <ListView x:Name="listImage" RowHeight="100" SeparatorColor="DarkCyan" ItemSelected="listImage_ItemSelected">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="2*"/>
+                            </Grid.ColumnDefinitions>
+                            <Image Source="{Binding image}" Grid.Row="0" Grid.Column="0" Aspect="AspectFill"/>
+                            <Label Text="{Binding name}" Grid.Row="0" Grid.Column="1"
+                                   FontAttributes="Bold"
+                                   FontSize="Large"
+                                   VerticalOptions="Center"/>
+
+                        </Grid>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+            
+        </ListView>
+        <Button x:Name="btnlistanimal" Text="Go to page animal" Clicked="btnlistanimal_Clicked" HeightRequest="100"
+                BackgroundColor="DeepSkyBlue" TextColor="White" FontSize="20"/>
+    </StackLayout>
+</ContentPage>

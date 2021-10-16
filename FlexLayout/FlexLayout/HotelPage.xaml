@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FlexLayout.HotelPage"
+             Title="                     Hotel" >
+    <ContentPage.Content>
+        <StackLayout>
+
+            <ListView x:Name="listHotel" RowHeight="250" SeparatorColor="DarkCyan" ItemSelected="listHotel_ItemSelected">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Grid Padding="10">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="70"/>
+                                    <RowDefinition Height="120"/>
+                                    <RowDefinition Height="50"/>
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="150"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <Image Source="{Binding image}" Grid.Row="0" Grid.Column="0" Grid.RowSpan="3" Aspect="AspectFill"/>
+                                <Label Text="{Binding name}" TextColor="DarkBlue" Grid.Row="0" Grid.Column="1"
+                                   FontAttributes="Bold"
+                                   FontSize="Large"
+                                   />
+                                <Label Text="{Binding description}"  Grid.Row="1" Grid.Column="1"
+                                   FontAttributes="Bold"
+                                   FontSize="Small"/>
+                                <Label Text="{Binding phone}" Grid.Row="2" Grid.Column="1"
+                                   FontAttributes="Italic" TextColor="DarkBlue"
+                                   FontSize="Medium"/>
+
+
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+
+            </ListView>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

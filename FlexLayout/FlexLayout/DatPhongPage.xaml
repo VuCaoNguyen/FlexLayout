@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FlexLayout.DatPhongPage">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style TargetType="Label" >
+                <Setter Property="FontSize">20</Setter>
+                <Setter Property="Padding">10</Setter>
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <Grid>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="100"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="100"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="50"/>
+               
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+
+            <Label Text="Booking" HorizontalTextAlignment="Center" TextColor="White" FontSize="36" BackgroundColor="DeepSkyBlue"
+                   Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2"/>
+       
+            <Label Text="Name" Grid.Row="1" Grid.Column="0"/>
+            <Label Text="Email" Grid.Row="2" Grid.Column="0"/>
+            <Label Text="Phone number" Grid.Row="3" Grid.Column="0"/>
+            <Label Text="Hotel Name" Grid.Row="4" Grid.Column="0"/>
+            <Label Text="Hotel Phone" Grid.Row="5" Grid.Column="0"/>
+            <Label Text="Start date" Grid.Row="6" Grid.Column="0"/>
+            <Label Text="End date" Grid.Row="7" Grid.Column="0"/>
+            <Button x:Name="submit" Text="Submit" Clicked="submit_Clicked" Grid.Row="8" Grid.Column="0"/>
+
+
+
+            <Entry x:Name="username" Keyboard="Text" Placeholder="Name"  Grid.Row="1" Grid.Column="1"/>
+
+            <Entry x:Name="Email" Keyboard="Email" Placeholder="Email"  Grid.Row="2" Grid.Column="1"/>
+
+            <Entry x:Name="Phone" Keyboard="Telephone" Placeholder="Phone number" Grid.Row="3" Grid.Column="1"/>
+
+            <Label x:Name="hotel" FontSize="Large" TextColor="Green" Grid.Row="4" Grid.Column="1"/>
+            <Label x:Name="phoneHotel" FontSize="Large" TextColor="Blue" Grid.Row="5" Grid.Column="1"/>
+
+            <DatePicker VerticalOptions="CenterAndExpand" Format="D" Grid.Row="6" Grid.Column="1"/>
+            <DatePicker VerticalOptions="CenterAndExpand" Format="D" Grid.Row="7" Grid.Column="1"/>
+
+            <Button x:Name="cancel" Text="Cancel" Clicked="cancel_Clicked" Grid.Row="8" Grid.Column="1"/>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
