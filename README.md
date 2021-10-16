@@ -1,4 +1,4 @@
 # FlexLayout
 
-<image height="1920" alt="" source="https://github.com/VuCaoNguyen/FlexLayout/blob/master/Image%20Result/Screenshot_1634366976.png">
+<image height="360" alt="" source="https://raw.githubusercontent.com/VuCaoNguyen/FlexLayout/master/Image%20Result/Screenshot_1634366976.png">
 
